@@ -1,0 +1,121 @@
+<html>
+	<head>
+		<title>
+			Div display only
+		</title>
+		<style type="text/css">
+			.Table
+			{
+				display: table;
+				width: 80%;
+			}
+			.Heading
+			{
+				display: table-row;
+				font-weight: bold;
+				text-align: left;
+				border: solid;
+				border-width: thin;
+			}
+			.Row
+			{
+				display: table-row;
+				padding-left: 5px;
+				padding-right: 5px;
+				border: solid;
+				border-width: thin;
+			}
+			.Cell
+			{
+				display: table-cell;
+				border: solid;
+				border-width: thin;
+				padding-left: 5px;
+				padding-right: 5px;
+				text-align: center;
+			}
+			.LeftAlignCell
+			{
+				display: table-cell;
+				text-align: left;
+				border: solid;
+				border-width: thin;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="Table">
+			<div class="Heading">
+				<div class="LeftAlignCell">
+					<p>Roll No</p>
+				</div>
+				<div class="LeftAlignCell">
+					<div class="Row">
+						<p>ISA</p>
+					</div>
+					<hr/>
+					<div class="Row">
+						<p>60</p>
+					</div>
+				</div>
+				<div class="LeftAlignCell">
+					<div class="Row">
+						<p>SEE</p>
+					</div>
+					<hr/>
+					<div class="Row">
+						<p>40</p>
+					</div>
+				</div>
+				<div class="LeftAlignCell">
+					<div class="Row">
+						<p>Total</p>
+					</div>
+					<hr/>
+					<div class="Row">
+						<p>100</p>
+					</div>
+				</div>
+				<div class="LeftAlignCell">
+					<p>Class</p>
+				</div>
+			</div>
+			<div class="Row">
+				<div class="Cell">
+					<p>1801</p>
+				</div>
+				<div class="Cell">
+					<p>40</p>
+				</div>
+				<div class="Cell">
+					<p>30</p>
+				</div>
+				<div class="Cell">
+					<p>70</p>
+				</div>
+				<div class="Cell">
+					<p>First</p>
+				</div>
+			</div>
+			<div class="Row">
+				<div class="Cell">
+					<p>1802</p>
+				</div>
+				<div class="Cell">
+					<p>50</p>
+				</div>
+				<div class="Cell">
+					<p>35</p>
+				</div>
+				<div class="Cell">
+					<p>85</p>
+				</div>
+				<div class="Cell">
+					<p>Distinction</p>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

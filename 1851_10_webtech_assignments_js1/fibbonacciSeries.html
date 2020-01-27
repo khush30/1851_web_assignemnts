@@ -1,0 +1,28 @@
+<html>
+
+	<head>
+		<script language="javascript" type="text/javascript" src="numberscript.js">	</script>
+		<title>Fibbonacci Series</title>
+	</head>
+	
+	<body>
+		<h2>Fibbonacci series</h2><br/>
+		<p> kindly check the console for the output. (press f12)</p><br/>
+		
+		<form action="main.html">
+			Enter the number of terms you want
+			<input type="text" id="userin"></input></br>
+			<button type="submit" onclick="run()">Submit</button>
+			<script>
+				function run()
+				{
+					var num = document.getElementById("userin").value;
+					console.log(fibbonacciSeries(num));
+					alert(fibbonacciSeries(num));
+				}
+			</script>
+		</form>
+		
+	</body>
+
+</html>

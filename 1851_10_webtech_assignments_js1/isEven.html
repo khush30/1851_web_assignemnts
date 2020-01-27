@@ -1,0 +1,27 @@
+<html>
+
+	<head>
+		<script language="javascript" type="text/javascript" src="numberscript.js">	</script>
+		<title>Even or odd</title>
+	</head>
+	
+	<body>
+		<h2>Factorial</h2><br/>
+		<p> kindly check the console for the output. (press f12)</p><br/>
+		
+		<form action="main.html">
+			Enter a number to find if it's even or odd
+			<input type="text" id="userin"></input></br>
+			<button type="submit" onclick="run()">Submit</button>
+			<script>
+				function run()
+				{
+					var num = document.getElementById("userin").value;
+					console.log(isEven(num));
+					alert(isEven(num));
+				}
+			</script>
+		</form>
+	</body>
+
+</html>

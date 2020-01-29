@@ -12,6 +12,9 @@
         <button onclick="display()">
             Print the array
         </button>
+		<button onclick="sort()">
+            Sort the array
+        </button>
         <button onclick="sum()">
             Print sum of elements
         </button>
@@ -23,6 +26,8 @@
         </button>
         <br/><hr/>
         <p id="arrDisplay"></p>
+		<hr/><br/><hr/>
+        <p id="displayArea2"></p>
         <hr/><br/><hr/>
         <p id="displayArea"></p>
         <hr/><br/>
@@ -30,19 +35,28 @@
             var arr = [3,12,444,1,11,34,67,91];
             function display()
             {
+                console.log(displayC(arr));
                 document.getElementById("arrDisplay").innerHTML = arr;
             }
             function sum()
             {
+                console.log(sumFunc(arr));
                 document.getElementById("displayArea").innerHTML = "The sum of all the elements of the array is : " + sumFunc(arr);
             }
             function max()
             {
+                console.log(maxFunc(arr));
                 document.getElementById("displayArea").innerHTML = "The max of all the elements of the array is : " + maxFunc(arr);
             }
             function min()
             {
+                console.log(minFunc(arr));
                 document.getElementById("displayArea").innerHTML = "The min of all the elements of the array is : " + minFunc(arr);
+            }
+            function sort()
+            {
+                console.log(sortFunc(arr));
+                document.getElementById("displayArea2").innerHTML = "The sorted array is : " + sortFunc(arr);
             }
         </script>
     </body>

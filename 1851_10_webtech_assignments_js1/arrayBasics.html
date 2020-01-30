@@ -12,10 +12,7 @@
         <button onclick="display()">
             Print the array
         </button>
-		<button onclick="sort()">
-            Sort the array
-        </button>
-        <button onclick="sum()">
+		<button onclick="sum()">
             Print sum of elements
         </button>
         <button onclick="max()">
@@ -24,12 +21,15 @@
         <button onclick="min()">
             Print the min element
         </button>
+        <button onclick="sort()">
+            Sort the array
+        </button>
         <br/><hr/>
         <p id="arrDisplay"></p>
 		<hr/><br/><hr/>
-        <p id="displayArea2"></p>
-        <hr/><br/><hr/>
         <p id="displayArea"></p>
+        <hr/><br/><hr/>
+        <p id="displayArea2"></p>
         <hr/><br/>
         <script>
             var arr = [3,12,444,1,11,34,67,91];
@@ -40,18 +40,21 @@
             }
             function sum()
             {
-                console.log(sumFunc(arr));
-                document.getElementById("displayArea").innerHTML = "The sum of all the elements of the array is : " + sumFunc(arr);
+                var result = sumFunc(arr); 
+				console.log(result);
+                document.getElementById("displayArea").innerHTML = "The sum of all the elements of the array is : " + result;
             }
             function max()
             {
-                console.log(maxFunc(arr));
-                document.getElementById("displayArea").innerHTML = "The max of all the elements of the array is : " + maxFunc(arr);
+                var result = maxFunc(arr);
+				console.log(arr[result] + " at " + (result+1));
+                document.getElementById("displayArea").innerHTML = "The max of all the elements of the array is "+arr[result]+" at  " + (result+1);
             }
             function min()
             {
-                console.log(minFunc(arr));
-                document.getElementById("displayArea").innerHTML = "The min of all the elements of the array is : " + minFunc(arr);
+                var result = minFunc(arr);
+				console.log(arr[result] + " at " + (result+1));
+                document.getElementById("displayArea").innerHTML = "The min of all the elements of the array is "+arr[result]+" at  " + (result+1);
             }
             function sort()
             {

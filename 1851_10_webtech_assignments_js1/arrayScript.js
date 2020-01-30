@@ -1,3 +1,11 @@
+function displayC(arr)
+{
+    var result = '';
+    for( i=0 ; i<arr.length ; i++)
+        result += " " + arr[i];
+    return result;
+}
+
 function sumFunc(arr)
 {
     sum = 0;
@@ -8,20 +16,28 @@ function sumFunc(arr)
 
 function minFunc(arr)
 {
-    min = arr[0];
+    var pos = 0;
+	var min = arr[0];
     for( i=1 ; i<arr.length ; i++)
         if(arr[i] < min)
-            min = arr[i];
-    return min;
+        {
+			min = arr[i];
+			pos=i;
+		}
+    return pos;
 }
 
 function maxFunc(arr)
 {
-    max = arr[0];
+    var max = arr[0];
+	var pos = 0;
     for( i=1 ; i<arr.length ; i++)
         if(arr[i] > max)
-            max = arr[i];
-    return max;
+        {
+			max = arr[i];
+			pos=i;
+		}
+    return pos;
 }
 
 function sortFunc(arr)

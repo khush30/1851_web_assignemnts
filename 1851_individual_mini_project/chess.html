@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chess</title>
+    <style type="text/css">
+        .board {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        .board-content {
+            width: 640px;
+            height: 640px;
+            margin: 20px;
+            border: 20px solid rgb(31, 30, 30);
+            color: rgb(113, 111, 131);
+        }
+
+        .black {
+            float: left;
+            width: 80px;
+            height: 80px;
+            background-color: rgb(14, 13, 13);
+            font-size: 50px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .white {
+            float: left;
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+            font-size: 50px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        img{
+            width: 50px;
+            height: 50px;
+            
+        }
+
+        #opponent{
+            filter: invert(150%);
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("img", ev.target.id);
+        }
+        
+        function drop(ev) {
+          var data = ev.dataTransfer.getData("img");
+          ev.target.appendChild(document.getElementById(data));
+          ev.preventDefault();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="board">
+        <div class="board-content">
+            <!-- 1st row-->
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/haathi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/oont.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/ghoda.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/baadshah.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/raani.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/ghoda.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/oont.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/haathi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <!-- 2nd row -->
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <!-- 3rd row -->
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <!-- 4th row -->
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <!-- 5th row-->
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <!-- 6th row-->
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <!-- 7th row-->
+            <div class="white"   ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black"   ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white"   ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/sipaahi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <!-- 8th row -->
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/haathi.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/oont.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/ghoda.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/raani.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/baadshah.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/ghoda.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="black"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/oont.png" draggable="true" ondragstart="drag(event)"/></div>
+            <div class="white"  ondrop="drop(event)" ondragover="allowDrop(event)"><img id="opponent" src="png/haathi.png" draggable="true" ondragstart="drag(event)"/></div>
+        </div>
+    </div>
+    <button type="reset" >Reset the game</button>
+</body>
+
+</html>

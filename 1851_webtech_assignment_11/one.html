@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>JS example 2</title>
+		
+		<style>
+			#demo{
+				display:none;
+			}
+		</style>
+		
+		<script>
+			function lukachupi(id)
+			{
+				var x = document.getElementById(id)
+				if(x.style.display == "none")
+					x.style.display = "block";
+				else
+					x.style.display = "none";
+			}
+			
+		</script>
+	</head>
+	<body>
+		<p>Question:<b onclick="lukachupi('demo')">What's my name?</b></p>
+		<div>Answer:<div id="demo">Khushboo Shetkar</div></div>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>
+    Resize example
+  </title>
+</head>
+<body onresize="myFunction()">
+
+<p>Try to resize the browser window</p>
+
+<p id="demo"></p>
+
+
+<script>
+function myFunction() {
+  var w = window.outerWidth;
+  if(w >= 1000)
+    document.getElementById("demo").innerHTML = "<img src='image1.jpg'>";
+  else if(w>=800)
+    document.getElementById("demo").innerHTML = "<img src='image2.jpg'>";
+  else
+    document.getElementById("demo").innerHTML = "<img width = '350' src='image3.jpg'>";
+  
+}
+</script>
+
+</body>
+</html>

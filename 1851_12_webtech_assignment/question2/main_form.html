@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Details Form</title>
+	<link rel="stylesheet" type="text/css" href="stylecss.css">
+	<script language="javascript" type="text/javascript" src="recordsScript.js"> </script>
+</head>
+<body>
+
+	<form method="POST">
+		<div class="formarea">
+			<p align="center"><b>Student Details form</b></p>
+			<br/>	
+			<label>Roll No</label><input type="text" id="roll_no" >
+			<br/><br/>
+			<label>Name</label> &nbsp;&nbsp;&nbsp; <input type="text" id="name" >
+			<br/><br/>
+			<label>Gender</label>
+			<input type="radio" name="gender" id="m" value="male" > Male
+			<input type="radio" name="gender" id="f" value="female"> Female
+			<input type="radio" name="gender" id="o" value="other"> Others
+			<br/><br/>
+			<label>Semester</label>
+			<select id="sem" >
+				<option value="" default > </option>
+				<option value="Sem1" id="sem1">Sem1</option>
+				<option value="sem2" id="sem2">Sem2</option>
+				<option value="sem3" id="sem3">Sem3</option>
+				<option value="sem4" id="sem4">Sem4</option>
+				<option value="sem5" id="sem5">Sem5</option>
+				<option value="sem6" id="sem6">Sem6</option>
+			</select>
+
+			<br/><br/>
+			<fieldset class="Elective_box">
+			<legend >ELECTIVES</legend>
+			<input type="checkbox" id="ele1" value="Ethical Hacking"> ETHETICAL HECKING <br/>
+			<input type="checkbox" id="ele2" value="IOT"> IOT <br/>
+			<input type="checkbox" id="ele3" value="Music"> MUSIC <br/>
+			</fieldset>
+			<br/><br/>
+			<button onclick="fetch(); return false" style="margin-left: 30px;background-color: grey;border: 1px black;height: 30px;width: 130px;">Submit</button>
+
+		</div>
+		<br>
+		<br>	
+	</form>
+
+	<table id="display_area">
+		<tr>
+			<th>Roll No</th>
+			<th>Name</th>
+			<th>Gender</th>
+			<th>Sem</th>
+			<th>Elective</th>
+		</tr>
+	</table>
+</body>
+</html>

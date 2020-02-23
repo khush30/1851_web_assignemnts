@@ -1,0 +1,43 @@
+.formarea{
+			width: 400px;
+			height: 400px;
+			border:2px solid black;
+			padding: 20px;
+			background-color: cyan;
+			margin-left: 100px;
+
+		}
+
+.Elective_box{
+			width: 200px;
+
+		}
+
+.right{
+	margin-left: 400px;
+	border:1px solid black;
+	height: 300px;
+	width: 300px;
+
+	}
+
+#display_area{
+	border:1px solid;
+	width: 550px;
+	margin-top: -480px;
+	margin-left: 650px;
+}	
+
+.hrow{
+	display: table-row; 
+	font-weight: bold;
+}
+
+.row{
+	display: table-row; 
+}
+
+.cell{
+	display: table-cell; 
+	border: solid;
+}

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="script.js"></script>
+
+	<title>Search</title>
+
+</head>
+
+<body>
+	<div class="elective-form">
+		<p id="para">
+			Indian classical music is the classical music of the Indian subcontinent. It has two major traditions: the North Indian classical music tradition is called Hindustani, while the South Indian expression is called Carnatic. These traditions were not distinct until about the 16th century.
+		</p>
+		<form name="form">
+			<br><br>
+			Search:<br><input type="text" id="search">
+
+			<br><br>
+
+			<br><input type="radio" id="text" value="searchtext"> Search text
+			<input type="radio" id="regex" value="searchregex"> Search regular expression
+			<br><br>
+			<input type="checkbox" id="ignorecase" value="ignorecase">Ignore case
+			<input type="checkbox" id="matchword" value="matchword">Match Whole Word
+
+			<br><br><br>
+			<input type="button" value="Search" onclick="searchword('matchword')" style="margin-left: 70px;">
+		</form>
+
+	</div>
+
+</body>
+
+</html>

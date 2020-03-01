@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            Drag and Drop
+        </title>
+        <script>
+            function allowDrop(ev) {
+              ev.preventDefault();
+            }
+            
+            function drag(ev) {
+              ev.dataTransfer.setData("img", ev.target.id);
+            }
+            
+            function drop(ev) {
+              var data = ev.dataTransfer.getData("img");
+              ev.target.appendChild(document.getElementById(data));
+              ev.preventDefault();
+            }
+        </script>
+    </head>
+    <body>
+        <div id="b1" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 30%; height: 30%; border: 20px solid rgb(31, 30, 30);">
+        
+        </div>
+        <div id="b2" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 20px solid rgb(31, 30, 30); width: 30%;height: 30%;">
+        
+        </div>
+        <div id="b3" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 30%; height: 30%;" >
+            <img id="im" src="pic.jpg" width="200px" height="150px" draggable="true" ondragstart="drag(event)"/>
+        </div>
+    </body>
+</html>

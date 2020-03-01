@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+                
+        <script>
+            var draggable = function(element) {
+            element.addEventListener('mousedown', function(e) {
+                e.stopPropagation();
+                if (e.target != element)
+                    return;
+                var offsetX = e.pageX - element.offsetLeft;
+                var offsetY = e.pageY - element.offsetTop;
+                function move(e) {
+                    var ele = document.getElementById('ele');
+                    var width = 400-ele.clientWidth;
+                    var height = 400-ele.clientHeight;
+                    element.style.left = (e.pageX - offsetX) + 'px';
+                    element.style.top = (e.pageY - offsetY) + 'px';
+                }
+                function stop(e) {
+                    document.removeEventListener('mousemove', move);
+                    document.removeEventListener('mouseup', stop);
+                }
+                document.addEventListener('mousemove', move);
+                document.addEventListener('mouseup', stop);
+            });
+        }
+
+        function init() {
+            var ele = document.getElementById('ele');
+            draggable(ele);
+        }
+        </script>
+    </head>
+
+<body onload="init();">
+    <div id="testdiv" style="position:relative;left:100px;overflow:hidden;border:1px solid #ccc;width:400px;height:400px">
+        <div id="ele" style="width:600px; height:600px; position:absolute; background-image:url( 'pic.jpg' );background-repeat:no-repeat; background-origin: content-box; background-size: 500px 500px;"></div> 
+    </div>
+</body>
+</html>
